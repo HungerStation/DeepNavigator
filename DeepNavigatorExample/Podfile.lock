@@ -1,0 +1,16 @@
+PODS:
+  - DeepNavigator (0.1.2)
+
+DEPENDENCIES:
+  - DeepNavigator
+
+SPEC REPOS:
+  trunk:
+    - DeepNavigator
+
+SPEC CHECKSUMS:
+  DeepNavigator: 846ce70c3be98b282294f8cc73b80aed4d6a1b7b
+
+PODFILE CHECKSUM: c3aff809e2a35522d16700a562bca8021a1d4507
+
+COCOAPODS: 1.8.4

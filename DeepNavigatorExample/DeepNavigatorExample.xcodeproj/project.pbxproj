@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B5DB2EB9B5599F6760FCA16 /* Pods_DeepNavigatorExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40038C043D9DE3311322FC92 /* Pods_DeepNavigatorExample.framework */; };
 		6443120423DA037400933A5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6443120323DA037400933A5F /* AppDelegate.swift */; };
 		6443120823DA037400933A5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6443120723DA037400933A5F /* ViewController.swift */; };
 		6443120B23DA037400933A5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6443120923DA037400933A5F /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40038C043D9DE3311322FC92 /* Pods_DeepNavigatorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeepNavigatorExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50A37A3A0418971969907896 /* Pods-DeepNavigatorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepNavigatorExample.release.xcconfig"; path = "Target Support Files/Pods-DeepNavigatorExample/Pods-DeepNavigatorExample.release.xcconfig"; sourceTree = "<group>"; };
 		6443120023DA037400933A5F /* DeepNavigatorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepNavigatorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6443120323DA037400933A5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6443120723DA037400933A5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		6443120C23DA037500933A5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6443120F23DA037500933A5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6443121123DA037500933A5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EA70C1AAB871CCF82918C03 /* Pods-DeepNavigatorExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DeepNavigatorExample.debug.xcconfig"; path = "Target Support Files/Pods-DeepNavigatorExample/Pods-DeepNavigatorExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B5DB2EB9B5599F6760FCA16 /* Pods_DeepNavigatorExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A6640C8DE66731D978472C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6EA70C1AAB871CCF82918C03 /* Pods-DeepNavigatorExample.debug.xcconfig */,
+				50A37A3A0418971969907896 /* Pods-DeepNavigatorExample.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		644311F723DA037400933A5F = {
 			isa = PBXGroup;
 			children = (
 				6443120223DA037400933A5F /* DeepNavigatorExample */,
 				6443120123DA037400933A5F /* Products */,
+				0A6640C8DE66731D978472C4 /* Pods */,
+				AF4293C3039D70C1485FD674 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +81,14 @@
 			path = DeepNavigatorExample;
 			sourceTree = "<group>";
 		};
+		AF4293C3039D70C1485FD674 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40038C043D9DE3311322FC92 /* Pods_DeepNavigatorExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6443121423DA037500933A5F /* Build configuration list for PBXNativeTarget "DeepNavigatorExample" */;
 			buildPhases = (
+				2DC341103C7F0A8567FA4DEA /* [CP] Check Pods Manifest.lock */,
 				644311FC23DA037400933A5F /* Sources */,
 				644311FD23DA037400933A5F /* Frameworks */,
 				644311FE23DA037400933A5F /* Resources */,
+				9FA975B426A89093200E97D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DC341103C7F0A8567FA4DEA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DeepNavigatorExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FA975B426A89093200E97D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DeepNavigatorExample/Pods-DeepNavigatorExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DeepNavigatorExample/Pods-DeepNavigatorExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DeepNavigatorExample/Pods-DeepNavigatorExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		644311FC23DA037400933A5F /* Sources */ = {
@@ -278,6 +347,7 @@
 		};
 		6443121523DA037500933A5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EA70C1AAB871CCF82918C03 /* Pods-DeepNavigatorExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +366,7 @@
 		};
 		6443121623DA037500933A5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50A37A3A0418971969907896 /* Pods-DeepNavigatorExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
