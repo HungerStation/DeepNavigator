@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
   
   s.license = { :type => "MIT", :file => "../LICENSE" }
   s.author = { "HungerStation iOS Team" => "qutaibah.essa@hungerstation.com, ammar.tahhan@hungerstation.com" }
-  s.homepage = "https://github.com/HungerStation/DeepNavigator-ios"
-  s.source = { :git => "https://github.com/HungerStation/DeepNavigator-ios.git",
+  s.homepage = "https://github.com/HungerStation/DeepNavigator"
+  s.source = { :git => "https://github.com/HungerStation/DeepNavigator.git",
   :tag => "#{s.version}" }
   s.source_files = "DeepNavigator/**/*.{swift}"
   s.swift_version = "4.0"
