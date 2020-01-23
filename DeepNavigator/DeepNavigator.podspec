@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.description = "A smooth deeplinks handler that can be used with observers"
   s.requires_arc = true
   s.summary = "Handling deeplinks in a more civilized way"
-  s.version = "0.1.0"
+  s.version = "0.1.2"
   
   s.license = { :type => "MIT", :file => "../LICENSE" }
   s.author = { "HungerStation iOS Team" => "qutaibah.essa@hungerstation.com, ammar.tahhan@hungerstation.com" }
