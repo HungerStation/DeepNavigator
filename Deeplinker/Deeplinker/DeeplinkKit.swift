@@ -28,7 +28,7 @@ public class DeeplinkKit {
     
     func parse(url: URL, source: DeeplinkSource) {
         guard UIApplication.shared.applicationState == .active else {
-            NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil) { [weak self] (notification) in
+            NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationDidBecomeActive, object: nil, queue: nil) { [weak self] (notification) in
                 self?.parse(url: url, source: source)
             }
             return
@@ -75,7 +75,7 @@ fileprivate extension URL {
             let query = URLComponents(url: self, resolvingAgainstBaseURL: false)?.queryItems?.asKeyValue
             
             let pattern = URL(string: DeeplinkKit.scheme + pattern)!
-            var patternPath = pattern.pathComponents
+            let patternPath = pattern.pathComponents
             let patternQuery = URLComponents(url: pattern, resolvingAgainstBaseURL: false)?.queryItems?.asKeyValue
             
             guard self.host == pattern.host,
