@@ -12,32 +12,12 @@ import UserNotifications
 class DeeplinkApplicationDelegate: NSObject, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        let center = UNUserNotificationCenter.current()
-        center.delegate = self
-        center.requestAuthorization(options: [UNAuthorizationOptions.alert, .badge, .sound]) { (status, error) in
-            guard status else { return }
-            DispatchQueue.main.async {
-                application.registerForRemoteNotifications()
-            }
-        }
         if let userInfo = launchOptions?[UIApplication.LaunchOptionsKey.remoteNotification] as? [String: Any], let deeplink = userInfo["uri"] as? String, let url = URL(string: deeplink) {
             DeeplinkKit.center.parse(url: url, source: .launch)
         }
         return true
     }
-    
-    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        // failure, nothing to do
-    }
-    
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        var token = ""
-        for byte in deviceToken {
-            token = token + String(format: "%02.2hhx", arguments: [byte])
-        }
-        print(token)
-    }
-    
+        
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         if let deeplink = userInfo["uri"] as? String, let url = URL(string: deeplink) {
             DeeplinkKit.center.parse(url: url, source: .silentNotification)
@@ -48,11 +28,6 @@ class DeeplinkApplicationDelegate: NSObject, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         DeeplinkKit.center.parse(url: url, source: .openUrl)
         return true
-    }
-    
-    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
-        
-        return false
     }
 }
 

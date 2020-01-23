@@ -9,7 +9,7 @@
 import UIKit
 
 public class DeeplinkKit {
-    static var scheme: String = "router://"
+    fileprivate static var scheme: String = "scheme://"
     public static var center: DeeplinkKit = DeeplinkKit()
     public static var applicationDelegate: UIApplicationDelegate = DeeplinkApplicationDelegate()
     
